@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <h1>ADD RECIPE</h1>
+            <div class="form-group">
+                <input type="text" placeholder="Recipe Name" id="recipe-name" class="form-control2" onkeypress="lettersonly(this)" />
+            </div>
+            
+             <div class="form-group">
+                <textarea placeholder="Description" id="recepie-steps" class="form-control2"-control onkeypress="lettersonly(this)"></textarea>
+            </div> 
+        
+            
+            <h2>INGREDIENTS</h2>
+            <div class="ingredients"></div>
+        
+            <div class="row">
+                    
+                    <input type="text" id="add-ingredient" placeholder="Add Ingredient" class="form-control2" onkeypress="lettersonly(this)"/>
+                    <div class="append">
+                    <button onclick="addItem()" id="btn-ingredient" class="btn btn-primary">Add Ingredient</button>
+                    <button onclick="removeItem()" id="btn-ingredient" class="btn btn-primary">Remove Ingredient</button>
+                    </div>
+            </div>
+            <ul id ="dynamic-list">
+               
+            </ul>
+
+            <br/>
+            <button  class="btn btn-primary" id="Save">Save Recepie</button>
+            <!-- <button id="delete-recepie" class="btn btn-danger">Delete Recepie</button> -->
+        </div>
+    </div>
+
+    <table id="table">
+        <thead>
+            <th>Recipe Name</th>
+            <th>Description</th>
+            <th>Ingredients</th>
+            <th>Delete</th>
+        </thead>
+    </table>
+</div>
+<script src="list.js"></script>
+
+</body>
+</html>
